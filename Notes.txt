@@ -24,5 +24,17 @@ mongoose
 -install getpostman https://app.getpostman.com
 -install npm - gravatar
 -create delete post, experience, education, comments, like, unlike
-- front-end with react app
+- Getting started with React Front-end
+--npm i -g create-react-app | i=install, -g= global installation
+--create-react-app client | client folder where to install your reac app
+--npm i concurrently
+-- add scripts to package.json, client-install, client,dev
+----npm client-install to install to other computer
+--npm run dev
+--add link bootrap, fontawesome to index.html
+--add custom css file
+--rfc, rcc command shortcut for creating react component
+-cd client to install
+--npm i react-router-dom
+stop at 034 Creating the register form with state
 
