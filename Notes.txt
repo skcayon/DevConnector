@@ -1,5 +1,16 @@
 MERN Stack Front To Back Full Stack React, Redux & Node.js
 
+VS Code Editor
+-extension to be install (
+  Prettier - Code formatter by Esben Petersen,
+  Bracket Pair Colorizer by CoenraadS,
+  ES7 React/Redux/GraphQL/React-Native snippets by dsznajder,
+  Live Server by ritwick dey,
+  Atom One Dark Theme by Mahmoud Ali,
+  Node.js Modules Intellisense by Zongmin Lei
+
+  )
+
 -create mongodb at mlab.com
  add new db
  add new user to db
@@ -36,5 +47,6 @@ mongoose
 --rfc, rcc command shortcut for creating react component
 -cd client to install
 --npm i react-router-dom
-stop at 034 Creating the register form with state
-
+--npm classnames
+--npm i redux react-redux redux-thunk
+---create store, reducers
