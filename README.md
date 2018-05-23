@@ -2,4 +2,5 @@
 
 Social media profile for developer
 
-MERN Stack Front To Back Full Stack React, Redux & Node.js
+MERN Stack Front To Back Full Stack MongoDB, Express, React, Redux & Node.js, Webpack
+
