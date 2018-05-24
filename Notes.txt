@@ -50,3 +50,5 @@ mongoose
 --npm classnames
 --npm i redux react-redux redux-thunk
 ---create store, reducers
+- Private Route Setup
+--Protected Routes and authentication with React Router
