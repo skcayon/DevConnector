@@ -13,12 +13,12 @@ const InputGroup = ({
 }) => {
   return (
     <div className="input-group mb-3">
-      <div className="imput-group-preprend">
-        <span className="imput-group-text">
+      <div className="input-group-prepend">
+        <span className="input-group-text">
           <i className={icon} />
         </span>
       </div>
-      <textarea
+      <input
         className={classnames("form-control form-control-lg", {
           "is-invalid": error
         })}
@@ -27,19 +27,18 @@ const InputGroup = ({
         value={value}
         onChange={onChange}
       />
-
       {error && <div className="invalid-feedback">{error}</div>}
     </div>
   );
 };
 
 InputGroup.propTypes = {
-  name: PropTypes.string,
+  name: PropTypes.string.isRequired,
   placeholder: PropTypes.string,
   value: PropTypes.string.isRequired,
   icon: PropTypes.string,
-  type: PropTypes.string.isRequired,
   error: PropTypes.string,
+  type: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired
 };
 
