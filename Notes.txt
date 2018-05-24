@@ -52,3 +52,5 @@ mongoose
 ---create store, reducers
 - Private Route Setup
 --Protected Routes and authentication with React Router
+- Create Edit Profile
+--git push
