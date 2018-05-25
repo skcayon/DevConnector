@@ -55,6 +55,7 @@ class CreateProfile extends Component {
         ? profile.githubusername
         : "";
       profile.bio = !isEmpty(profile.bio) ? profile.bio : "";
+
       profile.social = !isEmpty(profile.social) ? profile.social : {};
       profile.twitter = !isEmpty(profile.social.twitter)
         ? profile.social.twitter
@@ -191,9 +192,7 @@ class CreateProfile extends Component {
           <div className="row">
             <div className="col-md-8 m-auto">
               <h1 className="display-4 text-center">Edit Profile</h1>
-              <p className="lead text-center">
-                Let's get some information to make your profile stand out
-              </p>
+
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
