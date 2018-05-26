@@ -12,7 +12,11 @@ class Experience extends Component {
         <td>{exp.title}</td>
         <td>
           <Moment format="YYYY/MM/DD">{exp.from}</Moment> -{" "}
-          <Moment format="YYYY/MM/DD">{exp.to}</Moment>
+          {exp.to === null ? (
+            "Now"
+          ) : (
+            <Moment format="YYYY/MM/DD">{exp.to}</Moment>
+          )}
         </td>
         <td>
           <button className="btn btn-danger">Delete</button>
@@ -39,9 +43,9 @@ class Experience extends Component {
   }
 }
 
-// const mapStateToProps = state => ({
-//   profile: state.profile,
-//   auth: state.auth
-// });
+const mapStateToProps = state => ({
+  profile: state.profile,
+  auth: state.auth
+});
 
-export default connect(null)(withRouter(Experience));
+export default connect(mapStateToProps)(withRouter(Experience));
