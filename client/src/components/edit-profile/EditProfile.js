@@ -33,6 +33,7 @@ class CreateProfile extends Component {
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
   }
+
   componentDidMount() {
     this.props.getCurrentProfile();
   }
@@ -41,10 +42,11 @@ class CreateProfile extends Component {
     if (nextProps.errors) {
       this.setState({ errors: nextProps.errors });
     }
+
     if (nextProps.profile.profile) {
       const profile = nextProps.profile.profile;
 
-      // Bring skills array back to Comma Separated Value
+      // Bring skills array back to CSV
       const skillsCSV = profile.skills.join(",");
 
       // If profile field doesnt exist, make empty string
@@ -86,7 +88,7 @@ class CreateProfile extends Component {
         facebook: profile.facebook,
         linkedin: profile.linkedin,
         youtube: profile.youtube,
-        instagram: this.state.instagram
+        instagram: profile.instagram
       });
     }
   }
@@ -195,9 +197,6 @@ class CreateProfile extends Component {
                 Go Back
               </Link>
               <h1 className="display-4 text-center">Edit Profile</h1>
-              <p className="lead text-center">
-                Let's get some information to make your profile stand out
-              </p>
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
