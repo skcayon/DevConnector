@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import Facebook from "../facebook/Facebook";
 
 class Landing extends Component {
   componentDidMount() {
@@ -30,6 +31,8 @@ class Landing extends Component {
                 <Link to="/login" className="btn btn-lg btn-light">
                   Login
                 </Link>
+                <hr />
+                <Facebook />
               </div>
             </div>
           </div>

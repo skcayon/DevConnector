@@ -1,15 +1,5 @@
 import React, { Component } from "react";
 import { Link, withRouter } from "react-router-dom";
-<<<<<<< HEAD
-import { TextFielldGroup } from "../common/TextFieldGroup";
-import { TextAreaFielldGroup } from "../common/TextAreaFieldGroup";
-import { connect } from "react-redux";
-import PropTypes from "prop-types";
-
-class AddExperience extends Component {
-  constructor(props) {
-    super();
-=======
 import TextFieldGroup from "../common/TextFieldGroup";
 import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
 import { connect } from "react-redux";
@@ -19,27 +9,17 @@ import { addExperience } from "../../actions/profileActions";
 class AddExperience extends Component {
   constructor(props) {
     super(props);
->>>>>>> a833f954d1fa1bf0ef5082d096a51568c46abd87
     this.state = {
       company: "",
       title: "",
       location: "",
       from: "",
       to: "",
-<<<<<<< HEAD
-      current: "",
-=======
       current: false,
->>>>>>> a833f954d1fa1bf0ef5082d096a51568c46abd87
       description: "",
       errors: {},
       disabled: false
     };
-<<<<<<< HEAD
-  }
-  render() {
-    return <div />;
-=======
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
     this.onCheck = this.onCheck.bind(this);
@@ -165,32 +145,20 @@ class AddExperience extends Component {
         </div>
       </div>
     );
->>>>>>> a833f954d1fa1bf0ef5082d096a51568c46abd87
   }
 }
 
 AddExperience.propTypes = {
-<<<<<<< HEAD
-=======
   addExperience: PropTypes.func.isRequired,
->>>>>>> a833f954d1fa1bf0ef5082d096a51568c46abd87
   profile: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
 };
 
-<<<<<<< HEAD
-const mapStateProps = state => ({
-=======
 const mapStateToProps = state => ({
->>>>>>> a833f954d1fa1bf0ef5082d096a51568c46abd87
   profile: state.profile,
   errors: state.errors
 });
 
-<<<<<<< HEAD
-export default connect(mapStateProps)(withTourter(AddExperience));
-=======
 export default connect(mapStateToProps, { addExperience })(
   withRouter(AddExperience)
 );
->>>>>>> a833f954d1fa1bf0ef5082d096a51568c46abd87

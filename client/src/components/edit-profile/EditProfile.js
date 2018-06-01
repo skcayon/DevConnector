@@ -198,10 +198,6 @@ class CreateProfile extends Component {
                 Go Back
               </Link>
               <h1 className="display-4 text-center">Edit Profile</h1>
-<<<<<<< HEAD
-
-=======
->>>>>>> a833f954d1fa1bf0ef5082d096a51568c46abd87
               <small className="d-block pb-3">* = required fields</small>
               <form onSubmit={this.onSubmit}>
                 <TextFieldGroup
