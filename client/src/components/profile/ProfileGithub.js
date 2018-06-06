@@ -14,14 +14,15 @@ class ProfileGithub extends Component {
     };
   }
 
+  //request to Gtihub API
   componentDidMount() {
-    const { username } = this.props;
+    const { username } = this.props; //grab the username
     const { count, sort, clientId, clientSecret } = this.state;
 
     fetch(
       `https://api.github.com/users/${username}/repos?per_page=${count}&sort=${sort}&client_id=${clientId}&client_secret=${clientSecret}`
     )
-      .then(res => res.json())
+      .then(res => res.json()) //res = responce
       .then(data => {
         if (this.refs.myRef) {
           this.setState({ repos: data });
@@ -31,7 +32,7 @@ class ProfileGithub extends Component {
   }
 
   render() {
-    const { repos } = this.state;
+    const { repos } = this.state; //pull out repos from state
 
     const repoItems = repos.map(repo => (
       <div key={repo.id} className="card card-body mb-2">

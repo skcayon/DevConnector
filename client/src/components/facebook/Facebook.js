@@ -2,13 +2,16 @@ import React, { Component } from "react";
 import FacebookLogin from "react-facebook-login";
 
 class Facebook extends Component {
-  state = {
-    isLoggedIn: false,
-    userID: "",
-    name: "",
-    email: "",
-    picture: ""
-  };
+  constructor(props) {
+    super();
+    this.state = {
+      isLoggedIn: false,
+      userID: "",
+      name: "",
+      email: "",
+      picture: ""
+    };
+  }
 
   responseFacebook = response => {
     //console.log(response);
